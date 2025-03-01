@@ -75,45 +75,17 @@ nav ul li a:hover, .nav-btn:hover {
     color: #C5FF20;
 }
 
-/* Call to Action Buttons */
-#cta-buttons {
+/* Hero Section */
+#home {
     background: #14121D;
+    color: #EAD69F;
     padding: 5rem 2rem;
+    height: auto;
+    min-height: 50vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-}
-
-.button-grid {
-    display: flex;
-    gap: 2rem;
-}
-
-.cta-btn {
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.available {
-    background: #C5FF20;
-    color: #14121D;
-}
-
-.data-scientist {
-    background: #EAD69F;
-    color: #14121D;
-}
-
-.software-dev {
-    background: #b4e61c;
-    color: #14121D;
-}
-
-.cta-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 /* About Section */
@@ -134,13 +106,14 @@ nav ul li a:hover, .nav-btn:hover {
 
 .about-left {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-right {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .no-bullets {
@@ -153,17 +126,12 @@ nav ul li a:hover, .nav-btn:hover {
 }
 
 .github-profile-action {
-    animation: moveUpDown 2s infinite ease-in-out;
-}
-
-.github-link {
-    text-align: center;
-    text-decoration: none;
+    animation: moveUpDown 4s infinite ease-in-out;
 }
 
 .github-link img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 
@@ -174,7 +142,7 @@ nav ul li a:hover, .nav-btn:hover {
 
 @keyframes moveUpDown {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-40px); }
 }
 
 /* GitHub Activity Section */
@@ -189,25 +157,23 @@ nav ul li a:hover, .nav-btn:hover {
     margin-bottom: 2rem;
 }
 
+.contribution-graph {
+    display: flex;
+    justify-content: center;
+}
+
 .contribution-graph img {
     max-width: 100%;
 }
 
 .github-stats {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
 }
 
 .github-stats img {
-    max-width: calc(50% - 1rem);
-}
-
-.star-count {
-    text-align: center;
-}
-
-.star-count img:first-child {
     max-width: 100%;
 }
 
@@ -236,19 +202,14 @@ nav ul li a:hover, .nav-btn:hover {
     border: 1px solid #C5FF20;
 }
 
-.project a.github-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #C5FF20;
-    color: #14121D;
-    text-decoration: none;
-    border-radius: 50px;
-    text-align: center;
+.project a {
+    display: flex;
+    justify-content: center;
 }
 
-.project a.github-btn:hover {
-    background-color: #b4e61c;
+.project-icon {
+    font-size: 2rem;
+    color: #C5FF20;
 }
 
 /* Technical Skills Section */
@@ -278,12 +239,6 @@ nav ul li a:hover, .nav-btn:hover {
     border-radius: 50%;
 }
 
-.percentage {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    color: #C5FF20;
-}
-
 /* Contact Section */
 #contact {
     padding: 3rem 2rem;
@@ -292,11 +247,6 @@ nav ul li a:hover, .nav-btn:hover {
 }
 
 #contact h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-#contact h3 {
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -341,5 +291,17 @@ footer {
 }
 
 .social-links {
-    margin-top: 1rem
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
 
+.social-links a {
+    font-size: 1.5rem;
+    color: #C5FF20;
+}
+
+.social-links a:hover {
+    color: #EAD69F;
+}
