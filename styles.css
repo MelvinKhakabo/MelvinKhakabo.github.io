@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Reset and base styles */
 * {
     margin: 0;
@@ -33,6 +31,21 @@ nav {
     margin: 0 auto;
 }
 
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.role-btn {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background: #C5FF20;
+    color: #14121D;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -42,60 +55,178 @@ nav ul li {
     margin-left: 2rem;
 }
 
-nav ul li a {
+nav ul li a, .nav-btn {
     color: #EAD69F;
     text-decoration: none;
-    transition: color 0.3s ease; /* Smooth hover transition */
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #C5FF20; /* lightGreen */
+nav ul li a:hover, .nav-btn:hover {
+    color: #C5FF20;
 }
 
-/* Home section with animation */
-#home {
-    background: #14121D;
+.github-btn {
     color: #EAD69F;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.github-btn:hover {
+    color: #C5FF20;
+}
+
+/* Call to Action Buttons */
+#cta-buttons {
+    background: #14121D;
     padding: 5rem 2rem;
-    height: auto;
-    min-height: 50vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    opacity: 0; /* Start hidden */
-    animation: fadeIn 1s ease forwards; /* Fade in */
 }
 
-/* General section styling with animation */
-section {
+.button-grid {
+    display: flex;
+    gap: 2rem;
+}
+
+.cta-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.available {
+    background: #C5FF20;
+    color: #14121D;
+}
+
+.data-scientist {
+    background: #EAD69F;
+    color: #14121D;
+}
+
+.software-dev {
+    background: #b4e61c;
+    color: #14121D;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+#about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 3rem 2rem;
-    background: #201E28; /* ikiGrey */
-    max-width: 1200px;
-    margin: 0 auto;
+    background: #201E28;
+    color: #EAD69F;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.about-left {
+    flex: 1;
+}
+
+.about-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.no-bullets li {
+    margin-bottom: 0.5rem;
+}
+
+.github-profile-action {
+    animation: moveUpDown 2s infinite ease-in-out;
+}
+
+.github-link {
     text-align: center;
-    opacity: 0; /* Start hidden */
-    animation: fadeIn 1s ease forwards; /* Fade in */
+    text-decoration: none;
 }
 
-/* Staggered animation delays */
-#home { animation-delay: 0.2s; }
-#about { animation-delay: 0.4s; }
-#projects { animation-delay: 0.6s; }
-#contact { animation-delay: 0.8s; }
-
-/* Fade-in animation definition */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.github-link img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
 
-/* Project cards with hover effect */
+.github-link p {
+    margin-top: 1rem;
+    color: #C5FF20;
+}
+
+@keyframes moveUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* GitHub Activity Section */
+#github-activity {
+    padding: 3rem 2rem;
+    background-color: #201E28;
+    color: #EAD69F;
+}
+
+#github-activity h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contribution-graph img {
+    max-width: 100%;
+}
+
+.github-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.github-stats img {
+    max-width: calc(50% - 1rem);
+}
+
+.star-count {
+    text-align: center;
+}
+
+.star-count img:first-child {
+    max-width: 100%;
+}
+
+/* Projects Section */
+#projects {
+    padding: 3rem 2rem;
+    background-color: #201E28;
+    color: #EAD69F;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
 }
 
 .project {
@@ -103,25 +234,73 @@ section {
     padding: 1rem;
     border-radius: 8px;
     border: 1px solid #C5FF20;
-    transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth hover */
 }
 
-.project:hover {
-    transform: translateY(-5px); /* Slight lift */
-    border-color: #EAD69F; /* ikiBrown on hover */
-}
-
-.project a {
-    color: #C5FF20;
+.project a.github-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #C5FF20;
+    color: #14121D;
     text-decoration: none;
-    transition: color 0.3s ease;
+    border-radius: 50px;
+    text-align: center;
 }
 
-.project a:hover {
-    color: #EAD69F; /* ikiBrown */
+.project a.github-btn:hover {
+    background-color: #b4e61c;
 }
 
-/* Contact form */
+/* Technical Skills Section */
+#skills {
+    padding: 3rem 2rem;
+    background-color: #201E28;
+}
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill {
+    text-align: center;
+}
+
+.skill img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.percentage {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #C5FF20;
+}
+
+/* Contact Section */
+#contact {
+    padding: 3rem 2rem;
+    background-color: #201E28;
+    color: #EAD69F;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#contact h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -145,29 +324,22 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: transform 0.2s ease, background 0.3s ease; /* Smooth hover */
+    transition: transform 0.2s ease, background 0.3s ease;
 }
 
 button:hover {
-    transform: scale(1.05); /* Slight scale up */
-    background: #b4e61c; /* Darker lightGreen */
+    transform: scale(1.05);
+    background: #b4e61c;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     background: #14121D;
     color: #EAD69F;
+    text-align: center;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-}
+.social-links {
+    margin-top: 1rem
+
