@@ -5,20 +5,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Tsukimi Rounded', sans-serif; /* Assuming font is linked */
+    font-family: 'Tsukimi Rounded', sans-serif;
 }
 
-/* Body with darkBlue background and ikiBrown text */
+/* Body */
 body {
     line-height: 1.6;
-    color: #EAD69F; /* ikiBrown for text */
+    color: #EAD69F; /* ikiBrown */
     background-color: #14121D; /* darkBlue */
 }
 
-/* Header with darkBlue and lightGreen accents */
+/* Header */
 header {
-    background: #14121D; /* darkBlue */
-    color: #EAD69F; /* ikiBrown */
+    background: #14121D;
+    color: #EAD69F;
     padding: 1rem;
     position: fixed;
     width: 100%;
@@ -43,37 +43,54 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #EAD69F; /* ikiBrown */
+    color: #EAD69F;
     text-decoration: none;
+    transition: color 0.3s ease; /* Smooth hover transition */
 }
 
 nav ul li a:hover {
-    color: #C5FF20; /* lightGreen for hover */
+    color: #C5FF20; /* lightGreen */
 }
 
-/* Home section - Reduce height to fix spacing */
+/* Home section with animation */
 #home {
-    background: #14121D; /* darkBlue */
-    color: #EAD69F; /* ikiBrown */
-    padding: 5rem 2rem; /* Adjusted padding */
-    height: auto; /* Remove 100vh to avoid huge gap */
-    min-height: 50vh; /* Optional: keeps it substantial but not excessive */
+    background: #14121D;
+    color: #EAD69F;
+    padding: 5rem 2rem;
+    height: auto;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s ease forwards; /* Fade in */
 }
 
-/* General section styling with ikiGrey */
+/* General section styling with animation */
 section {
-    padding: 3rem 2rem; /* Reduced padding for tighter spacing */
+    padding: 3rem 2rem;
     background: #201E28; /* ikiGrey */
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s ease forwards; /* Fade in */
 }
 
-/* Project cards */
+/* Staggered animation delays */
+#home { animation-delay: 0.2s; }
+#about { animation-delay: 0.4s; }
+#projects { animation-delay: 0.6s; }
+#contact { animation-delay: 0.8s; }
+
+/* Fade-in animation definition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Project cards with hover effect */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -82,15 +99,26 @@ section {
 }
 
 .project {
-    background: #14121D; /* darkBlue */
+    background: #14121D;
     padding: 1rem;
     border-radius: 8px;
-    border: 1px solid #C5FF20; /* lightGreen border */
+    border: 1px solid #C5FF20;
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth hover */
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Slight lift */
+    border-color: #EAD69F; /* ikiBrown on hover */
 }
 
 .project a {
-    color: #C5FF20; /* lightGreen */
+    color: #C5FF20;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #EAD69F; /* ikiBrown */
 }
 
 /* Contact form */
@@ -104,31 +132,33 @@ form {
 input, textarea {
     padding: 0.8rem;
     margin-bottom: 1rem;
-    border: 1px solid #C5FF20; /* lightGreen */
+    border: 1px solid #C5FF20;
     border-radius: 4px;
-    background: #201E28; /* ikiGrey */
-    color: #EAD69F; /* ikiBrown */
+    background: #201E28;
+    color: #EAD69F;
 }
 
 button {
     padding: 0.8rem;
-    background: #C5FF20; /* lightGreen */
-    color: #14121D; /* darkBlue for contrast */
+    background: #C5FF20;
+    color: #14121D;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease; /* Smooth hover */
 }
 
 button:hover {
-    background: #b4e61c; /* Slightly darker lightGreen */
+    transform: scale(1.05); /* Slight scale up */
+    background: #b4e61c; /* Darker lightGreen */
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1rem;
-    background: #14121D; /* darkBlue */
-    color: #EAD69F; /* ikiBrown */
+    background: #14121D;
+    color: #EAD69F;
 }
 
 /* Responsive adjustments */
