@@ -131,3 +131,18 @@ footer {
         margin: 0.5rem 0;
     }
 }
+
+/* Toggle dark mode */
+
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+body.dark-mode header, body.dark-mode footer {
+    background: #111;
+}
+
+body.dark-mode .project {
+    background: #333;
+}
