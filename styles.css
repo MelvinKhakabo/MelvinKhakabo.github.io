@@ -13,6 +13,11 @@ body {
     background-color: #14121D; /* darkBlue */
 }
 
+body.light-mode {
+    background-color: #EAD69F;
+    color: #14121D;
+}
+
 /* Header */
 header {
     background: #14121D;
@@ -21,6 +26,11 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
+}
+
+body.light-mode header {
+    background: #EAD69F;
+    color: #14121D;
 }
 
 nav {
@@ -36,12 +46,19 @@ nav {
     align-items: center;
 }
 
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
 .role-btn {
     margin-left: 1rem;
-    padding: 0.5rem 1rem;
-    background: #C5FF20;
-    color: #14121D;
-    border: none;
+    padding: 0.8rem; /* Makes it square */
+    background: transparent; /* Clear with no color */
+    color: #EAD69F; /* Matches nav text */
+    border: 1px solid #EAD69F; /* Optional border for visibility */
     border-radius: 4px;
     cursor: pointer;
 }
@@ -49,29 +66,22 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 nav ul li {
     margin-left: 2rem;
 }
 
-nav ul li a, .nav-btn {
+nav ul li a {
     color: #EAD69F;
     text-decoration: none;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
-nav ul li a:hover, .nav-btn:hover {
-    color: #C5FF20;
-}
-
-.github-btn {
-    color: #EAD69F;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.github-btn:hover {
+nav ul li a:hover {
     color: #C5FF20;
 }
 
@@ -87,6 +97,21 @@ nav ul li a:hover, .nav-btn:hover {
     justify-content: center;
     text-align: center;
 }
+
+body.light-mode #home {
+    background: #EAD69F;
+    color: #14121D;
+}
+
+.typed-text {
+    border-right: 2px solid #C5FF20;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.role-data-scientist { color: #C5FF20; }
+.role-ml-enthusiast { color: #EAD69F; }
+.role-software-dev { color: #FFFFFF; }
 
 /* About Section */
 #about {
@@ -294,11 +319,11 @@ footer {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .social-links a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #C5FF20;
 }
 
