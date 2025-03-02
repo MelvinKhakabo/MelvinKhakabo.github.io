@@ -240,24 +240,13 @@ nav ul li a:hover {
 
 .project-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Move GitHub icon to the right */
     align-items: center;
     width: 100%;
 }
 
 .project-languages {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.project-languages i {
-    font-size: 1.5rem;
-}
-
-.project-languages span {
-    font-size: 0.9rem;
-    color: #EAD69F;
+    display: none; /* Temporarily hide until icons are fixed */
 }
 
 .project-link {
