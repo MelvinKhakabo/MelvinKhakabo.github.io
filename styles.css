@@ -91,12 +91,21 @@ nav ul li a:hover {
     color: #C5FF20;
 }
 
+/* General Section Styling */
+.section-dark {
+    background: #14121D;
+    padding: 5rem 2rem;
+    margin-bottom: 3rem; /* Space between sections */
+}
+
+.section-light {
+    background: #201E28;
+    padding: 5rem 2rem;
+    margin-bottom: 3rem; /* Space between sections */
+}
+
 /* Hero Section */
 #home {
-    background: #14121D;
-    color: #EAD69F;
-    padding: 5rem 2rem;
-    height: auto;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
@@ -104,47 +113,34 @@ nav ul li a:hover {
     text-align: center;
 }
 
-body.light-mode #home {
-    background: #EAD69F;
-    color: #14121D;
-}
-
-.typed-text {
-    border-right: 2px solid #C5FF20;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.role-data-scientist { color: #C5FF20; }
-.role-ml-enthusiast { color: #EAD69F; }
-.role-software-dev { color: #FFFFFF; }
-
 /* About Section */
 #about {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 3rem 2rem;
-    background: #201E28;
-    color: #EAD69F;
 }
 
 .about-container {
     display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
     justify-content: space-between;
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-left, .about-right {
+    flex: 1;
+    min-width: 300px; /* Ensures columns don’t collapse too small */
 }
 
 .about-left {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .about-right {
-    flex: 1;
-    text-align: center;
+    text-align: left; /* Changed from center to left for better readability */
 }
 
 .no-bullets {
@@ -177,12 +173,6 @@ body.light-mode #home {
 }
 
 /* GitHub Activity Section */
-#github-activity {
-    padding: 3rem 2rem;
-    background-color: #201E28;
-    color: #EAD69F;
-}
-
 #github-activity h2 {
     text-align: center;
     margin-bottom: 2rem;
@@ -209,12 +199,6 @@ body.light-mode #home {
 }
 
 /* Projects Section */
-#projects {
-    padding: 3rem 2rem;
-    background-color: #201E28;
-    color: #EAD69F;
-}
-
 #projects h2 {
     text-align: center;
     margin-bottom: 2rem;
@@ -264,10 +248,16 @@ body.light-mode #home {
 .project-languages {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .project-languages i {
     font-size: 1.5rem;
+}
+
+.project-languages span {
+    font-size: 0.9rem;
+    color: #EAD69F;
 }
 
 .project-link {
@@ -291,11 +281,11 @@ body.light-mode #home {
 
 .view-all-btn {
     display: inline-block;
-    padding: 0.8rem 1rem; /* Thinner width: reduced from 1.5rem to 1rem horizontally */
+    padding: 0.8rem 1rem;
     background: #C5FF20;
     color: #14121D;
     text-decoration: none;
-    border-radius: 20px; /* More rounded corners: increased from 4px to 20px */
+    border-radius: 20px;
     font-size: 1rem;
     transition: transform 0.2s ease, background 0.3s ease;
 }
@@ -306,11 +296,6 @@ body.light-mode #home {
 }
 
 /* Technical Skills Section */
-#skills {
-    padding: 3rem 2rem;
-    background-color: #201E28;
-}
-
 #skills h2 {
     text-align: center;
     margin-bottom: 2rem;
@@ -356,12 +341,6 @@ body.light-mode #home {
 .r { background-color: #276DC3; }
 
 /* Contact Section */
-#contact {
-    padding: 3rem 2rem;
-    background-color: #201E28;
-    color: #EAD69F;
-}
-
 #contact h2 {
     text-align: center;
     margin-bottom: 2rem;
