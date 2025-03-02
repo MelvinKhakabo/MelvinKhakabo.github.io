@@ -234,14 +234,13 @@ body.light-mode #home {
     border: 1px solid #C5FF20;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    min-height: 400px;
 }
 
 .project-img {
     width: 100%;
-    max-width: 250px;
-    height: auto;
+    height: 150px;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
@@ -253,16 +252,23 @@ body.light-mode #home {
 .project p {
     margin-bottom: 1rem;
     font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .project-languages {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1rem;
 }
 
 .project-languages i {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .project-link {
