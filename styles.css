@@ -21,7 +21,7 @@ body.light-mode {
 /* Header */
 header {
     background: #14121D;
-    color: #C5FF20;
+    color: #EAD69F;
     padding: 1rem;
     position: fixed;
     width: 100%;
@@ -282,6 +282,26 @@ body.light-mode #home {
 
 .project-link:hover .project-icon {
     color: #EAD69F;
+}
+.view-all {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.view-all-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #C5FF20;
+    color: #14121D;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.view-all-btn:hover {
+    transform: scale(1.05);
+    background: #b4e61c;
 }
 
 /* Technical Skills Section */
