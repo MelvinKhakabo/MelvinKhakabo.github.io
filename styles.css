@@ -35,6 +35,7 @@ body.light-mode header {
 
 nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -43,7 +44,6 @@ nav {
 .nav-left {
     display: flex;
     align-items: center;
-    margin-right: 2rem;
 }
 
 .profile-icon {
@@ -73,11 +73,10 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
 }
 
 nav ul li {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 }
 
 nav ul li a {
