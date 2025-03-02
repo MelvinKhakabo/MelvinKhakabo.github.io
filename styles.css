@@ -160,28 +160,15 @@ body.light-mode #home {
     animation: moveUpDown 4s infinite ease-in-out;
 }
 
-.github-link {
-    display: inline-block;
-    padding: 0.8rem 1rem; /* Reduced horizontal padding from 1.5rem to 1rem */
-    background: #C5FF20;
-    color: #14121D;
-    text-decoration: none;
-    border-radius: 20px; /* Increased from 4px to 20px for rounded corners */
-    font-size: 1rem;
-    transition: transform 0.2s ease, background 0.3s ease;
-    text-align: center;
-}
-
-.github-link:hover {
-    transform: scale(1.05);
-    background: #b4e61c;
-}
-
 .github-link img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin-bottom: 1rem;
+}
+
+.github-link p {
+    margin-top: 1rem;
+    color: #C5FF20;
 }
 
 @keyframes moveUpDown {
@@ -304,11 +291,11 @@ body.light-mode #home {
 
 .view-all-btn {
     display: inline-block;
-    padding: 0.8rem 1rem; /* Reduced horizontal padding from 1.5rem to 1rem */
+    padding: 0.8rem 1rem; /* Thinner width: reduced from 1.5rem to 1rem horizontally */
     background: #C5FF20;
     color: #14121D;
     text-decoration: none;
-    border-radius: 20px; /* Increased from 4px to 20px for rounded corners */
+    border-radius: 20px; /* More rounded corners: increased from 4px to 20px */
     font-size: 1rem;
     transition: transform 0.2s ease, background 0.3s ease;
 }
